@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ExFinalSIS457",
+			"Path": "..\\Source\\ExFinalSIS457.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ExFinalSIS457Editor",
+			"Path": "..\\Source\\ExFinalSIS457Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

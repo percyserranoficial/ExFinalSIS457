@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\SIS457\\unreal proyectos\\ExFinalSIS457\\Source\\ExFinalSIS457\\ExFinalSIS457.Build.cs",
+		"D:\\SIS457\\unreal proyectos\\ExFinalSIS457\\Source\\ExFinalSIS457.Target.cs",
+		"D:\\SIS457\\unreal proyectos\\ExFinalSIS457\\Source\\ExFinalSIS457Editor.Target.cs"
+	],
+	"EngineVersion": "5.5.3"
+}
