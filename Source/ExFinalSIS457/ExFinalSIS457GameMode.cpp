@@ -16,6 +16,15 @@
 #include "Puerta.h"
 #include "EstadoCerrada.h"
 #include "EstadoAbierta.h"
+// Iterator
+#include "IteratorEspaciosLibres.h"
+#include "IEspacioIterator.h"
+#include "Enemigo.h"
+// Abstract Factory
+#include "PowerUpFactoryNormal.h"
+#include "PowerUpVelocidad.h"
+#include "PowerUpBombasExtra.h"
+
 
 
 AExFinalSIS457GameMode::AExFinalSIS457GameMode()
@@ -34,6 +43,8 @@ void AExFinalSIS457GameMode::BeginPlay()
 	BuilderL();
 	DecoratorB();
 	StateP();
+	IteratoE();
+	ABstractFactory(6);
 }
 
 void AExFinalSIS457GameMode::Tick(float DeltaTime)
@@ -122,30 +133,110 @@ void AExFinalSIS457GameMode::DecoratorB()
 void AExFinalSIS457GameMode::StateP()
 {
 	UWorld* World = GetWorld();
-	if (!World) return;
+	if (!World || PosicionesLibres.Num() == 0) return;
 
-	FVector PosicionPuerta(1200.0f, 2000.0f, 0.0f); // Cambia la posición según sea necesario
+	// Escoger una posición libre aleatoria
+	int32 IndiceAleatorio = FMath::RandRange(0, PosicionesLibres.Num() - 1);
+	FVector PosicionPuerta = PosicionesLibres[IndiceAleatorio];
 
-	//spawnear la puerta
+	// Spawnear la puerta
 	APuerta* Puerta = World->SpawnActor<APuerta>(APuerta::StaticClass(), PosicionPuerta, FRotator::ZeroRotator);
 	if (!Puerta) return;
 
-	//spawnear el estado cerrado
+	// Spawnear el estado cerrado
 	AEstadoCerrada* EstadoCerrada = World->SpawnActor<AEstadoCerrada>(AEstadoCerrada::StaticClass());
 	if (EstadoCerrada)
 	{
 		Puerta->CambiarEstado(TScriptInterface<IIEstadoPuerta>(EstadoCerrada));
 	}
 
-	//Luego de unos segundos abrir la puerta
+	// Luego de unos segundos abrir la puerta
 	FTimerHandle TimerHandle;
 	World->GetTimerManager().SetTimer(TimerHandle, [=]()
 	{
+
 			AEstadoAbierta* EstadoAbierta = World->SpawnActor<AEstadoAbierta>(AEstadoAbierta::StaticClass());
 			if (EstadoAbierta)
 			{
 				Puerta->CambiarEstado(TScriptInterface<IIEstadoPuerta>(EstadoAbierta));
 			}
+
 	}, 20.0f, false);
 	
+}
+
+void AExFinalSIS457GameMode::IteratoE()
+{
+	if (PosicionesLibres.Num() == 0) return;
+
+	UWorld* World = GetWorld();
+	if (!World) return;
+
+	// Crear el iterator
+	AIteratorEspaciosLibres* Iterator = World->SpawnActor<AIteratorEspaciosLibres>();
+	if (!Iterator) return;
+
+	Iterator->Inicializar(PosicionesLibres);
+
+	// Recolectar las posiciones del iterator
+	TArray<FVector> PosicionesCandidatas;
+
+	while (Iterator->HasNext())
+	{
+		FVector Pos = Iterator->Next();
+		PosicionesCandidatas.Add(Pos);
+	}
+
+	// Barajar posiciones aleatoriamente
+	int32 CantidadEnemigos = 10;
+	CantidadEnemigos = FMath::Min(CantidadEnemigos, PosicionesCandidatas.Num()); // Evitar desbordes
+
+	// Reordenar aleatoriamente
+	for (int32 i = 0; i < PosicionesCandidatas.Num(); ++i)
+	{
+		int32 IndiceAleatorio = FMath::RandRange(0, PosicionesCandidatas.Num() - 1);
+		PosicionesCandidatas.Swap(i, IndiceAleatorio);
+	}
+
+	// Spawnear enemigos en las posiciones barajadas
+	for (int32 i = 0; i < CantidadEnemigos; ++i)
+	{
+		FVector Pos = PosicionesCandidatas[i];
+		World->SpawnActor<AEnemigo>(AEnemigo::StaticClass(), Pos, FRotator::ZeroRotator);
+	}
+
+}
+
+void AExFinalSIS457GameMode::ABstractFactory(int32 CantidadPowerUps)
+{
+	if (PosicionesLibres.Num() < CantidadPowerUps) return;
+
+	UWorld* World = GetWorld();
+	if (!World) return;
+
+	// Crear fábrica
+	APowerUpFactoryNormal* Fabrica = World->SpawnActor<APowerUpFactoryNormal>();
+	if (!Fabrica) return;
+
+	// Copia local para evitar duplicados
+	TArray<FVector> PosicionesDisponibles = PosicionesLibres;
+
+	for (int32 i = 0; i < CantidadPowerUps; ++i)
+	{
+		// Elegir una posición aleatoria
+		int32 Index = FMath::RandRange(0, PosicionesDisponibles.Num() - 1);
+		FVector Pos = PosicionesDisponibles[Index];
+		PosicionesDisponibles.RemoveAt(Index);
+
+		// Alternar aleatoriamente entre power-ups
+		int32 TipoPowerUp = FMath::RandRange(0, 1);
+		if (TipoPowerUp == 0)
+		{
+			Fabrica->CrearPowerUpVelocidad(World, Pos);
+		}
+		else
+		{
+			Fabrica->CrearPowerUpBombasExtra(World, Pos);
+		}
+	}
 }

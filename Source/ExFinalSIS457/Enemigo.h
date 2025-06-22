@@ -7,7 +7,7 @@
 #include "Enemigo.generated.h"
 
 class UStaticMeshComponent;
-
+class UMaterialInterface;
 
 UCLASS()
 class EXFINALSIS457_API AEnemigo : public AActor
@@ -19,6 +19,7 @@ public:
 	AEnemigo();
 
 	UStaticMeshComponent* MeshEnemigo;
+	UMaterialInterface* MaterialEnemigo;
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,5 +28,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 
 };

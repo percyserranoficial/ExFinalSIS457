@@ -23,6 +23,8 @@ public:
 	void BuilderL();
 	void DecoratorB();
 	void StateP();
+	void IteratoE();
+	void ABstractFactory(int32 CantidadPowerUps);
 
 	TArray<FVector> PosicionesLibres;
 };

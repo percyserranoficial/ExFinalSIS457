@@ -33,7 +33,7 @@ void ABombaConDobleExplosion::Explotar()
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ESPERANDO LA SEGUNDA EXPLOSION.........."));
 
 
-	GetWorld()->GetTimerManager().SetTimer(TimerHandleSegundaExplosion, this, &ABombaConDobleExplosion::SegundaExplosion, 5.0f, false);
+	GetWorld()->GetTimerManager().SetTimer(TimerHandleSegundaExplosion, this, &ABombaConDobleExplosion::SegundaExplosion, 15.0f, false);
 }
 
 void ABombaConDobleExplosion::SegundaExplosion()

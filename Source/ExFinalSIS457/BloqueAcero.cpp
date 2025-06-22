@@ -15,5 +15,5 @@ ABloqueAcero::ABloqueAcero()
 	}
 
 	// Establece una escala personalizada desde la clase hija
-	EstablecerEscala(FVector(3.0f, 3.0f, 3.0f));
+	EstablecerEscala(FVector(3.5f, 3.5f, 3.5f));
 }

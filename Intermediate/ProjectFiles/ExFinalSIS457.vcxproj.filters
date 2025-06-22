@@ -108,6 +108,15 @@
     <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoCerrada.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPatrullando.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPersiguiendo.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPersiguiendo.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
     <None Include="..\..\Source\ExFinalSIS457\ExFinalSIS457.Build.cs">
       <Filter>Source\ExFinalSIS457</Filter>
     </None>
@@ -135,6 +144,18 @@
     <ClCompile Include="..\..\Source\ExFinalSIS457\IBomba.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEspacioIterator.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEspacioIterator.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoEnemigo.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoEnemigo.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoPuerta.cpp">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
@@ -145,6 +166,48 @@
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\ILaberintoBuilder.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IPowerUp.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IPowerUp.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IPowerUpFactory.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IPowerUpFactory.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IteratorEspaciosLibres.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IteratorEspaciosLibres.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUp.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUp.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUpBombasExtra.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUpBombasExtra.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUpFactoryNormal.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUpFactoryNormal.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUpVelocidad.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\PowerUpVelocidad.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\Puerta.cpp">

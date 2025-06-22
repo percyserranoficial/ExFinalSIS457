@@ -11,9 +11,6 @@ AEnemigo::AEnemigo()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	// ESCALA
-	SetActorScale3D(FVector(2.0f, 2.0f, 2.0f));
-
 	// MALLA
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshAsset(TEXT("/Script/Engine.StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
 	if (MeshAsset.Succeeded())
@@ -22,6 +19,20 @@ AEnemigo::AEnemigo()
 		MeshEnemigo->SetStaticMesh(MeshAsset.Object);
 		RootComponent = MeshEnemigo;
 	}
+
+	//MATERIAL
+	static ConstructorHelpers::FObjectFinder<UMaterialInterface> MaterialAsset(TEXT("/Script/Engine.Material'/Game/StarterContent/Props/Materials/M_Rock.M_Rock'"));
+	if (MaterialAsset.Succeeded())
+	{
+		MaterialEnemigo = MaterialAsset.Object;
+		if (MeshEnemigo)
+		{
+			MeshEnemigo->SetMaterial(0, MaterialEnemigo);
+		}
+	}
+	
+	// Establecer escala inicial
+	MeshEnemigo->SetWorldScale3D(FVector(2.5f, 2.5f, 2.5f)); // Ajusta la escala según sea necesario
 }
 
 // Called when the game starts or when spawned
@@ -37,6 +48,7 @@ void AEnemigo::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
 
 
 
