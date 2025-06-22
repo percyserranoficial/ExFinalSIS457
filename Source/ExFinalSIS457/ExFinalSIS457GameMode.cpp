@@ -12,6 +12,10 @@
 #include "Bomba.h"
 #include "BombaConDobleExplosion.h"
 #include "Engine/World.h"
+// State
+#include "Puerta.h"
+#include "EstadoCerrada.h"
+#include "EstadoAbierta.h"
 
 
 AExFinalSIS457GameMode::AExFinalSIS457GameMode()
@@ -29,6 +33,7 @@ void AExFinalSIS457GameMode::BeginPlay()
 	Super::BeginPlay();
 	BuilderL();
 	DecoratorB();
+	StateP();
 }
 
 void AExFinalSIS457GameMode::Tick(float DeltaTime)
@@ -112,4 +117,35 @@ void AExFinalSIS457GameMode::DecoratorB()
 			BombaDecorada->Explotar();
 		}
 	}
+}
+
+void AExFinalSIS457GameMode::StateP()
+{
+	UWorld* World = GetWorld();
+	if (!World) return;
+
+	FVector PosicionPuerta(1200.0f, 2000.0f, 0.0f); // Cambia la posición según sea necesario
+
+	//spawnear la puerta
+	APuerta* Puerta = World->SpawnActor<APuerta>(APuerta::StaticClass(), PosicionPuerta, FRotator::ZeroRotator);
+	if (!Puerta) return;
+
+	//spawnear el estado cerrado
+	AEstadoCerrada* EstadoCerrada = World->SpawnActor<AEstadoCerrada>(AEstadoCerrada::StaticClass());
+	if (EstadoCerrada)
+	{
+		Puerta->CambiarEstado(TScriptInterface<IIEstadoPuerta>(EstadoCerrada));
+	}
+
+	//Luego de unos segundos abrir la puerta
+	FTimerHandle TimerHandle;
+	World->GetTimerManager().SetTimer(TimerHandle, [=]()
+	{
+			AEstadoAbierta* EstadoAbierta = World->SpawnActor<AEstadoAbierta>(AEstadoAbierta::StaticClass());
+			if (EstadoAbierta)
+			{
+				Puerta->CambiarEstado(TScriptInterface<IIEstadoPuerta>(EstadoAbierta));
+			}
+	}, 20.0f, false);
+	
 }

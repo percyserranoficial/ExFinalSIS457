@@ -7,7 +7,7 @@
 #include "Enemigo.generated.h"
 
 class UStaticMeshComponent;
-class IIEstadoEnemigo;
+
 
 UCLASS()
 class EXFINALSIS457_API AEnemigo : public AActor

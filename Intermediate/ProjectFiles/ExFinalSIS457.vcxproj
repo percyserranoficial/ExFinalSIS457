@@ -255,6 +255,7 @@
     <None Include="..\..\.gitattributes"/>
     <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\Temp.txt"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
@@ -320,16 +321,16 @@
     <ClCompile Include="..\..\Source\ExFinalSIS457\Enemigo.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPatrullando.cpp">
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoAbierta.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPatrullando.h">
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoAbierta.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPersiguiendo.cpp">
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoCerrada.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPersiguiendo.h">
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoCerrada.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <None Include="..\..\Source\ExFinalSIS457\ExFinalSIS457.Build.cs"/>
@@ -355,12 +356,6 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\IBomba.h">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoEnemigo.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoEnemigo.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoPuerta.cpp">

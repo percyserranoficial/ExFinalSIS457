@@ -3,8 +3,7 @@
 
 #include "Enemigo.h"
 #include "Components/StaticMeshComponent.h"
-#include "EstadoPatrullando.h"
-#include "IEstadoEnemigo.h"
+
 
 // Sets default values
 AEnemigo::AEnemigo()

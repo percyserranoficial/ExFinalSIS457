@@ -22,6 +22,8 @@ public:
 
 	void BuilderL();
 	void DecoratorB();
+	void StateP();
+
 	TArray<FVector> PosicionesLibres;
 };
 
