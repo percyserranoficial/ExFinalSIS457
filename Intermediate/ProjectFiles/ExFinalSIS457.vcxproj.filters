@@ -11,6 +11,8 @@
     <None Include="..\..\Source\ExFinalSIS457Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -63,6 +65,18 @@
     <ClCompile Include="..\..\Source\ExFinalSIS457\Bomba.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\BombaConDobleExplosion.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\BombaConDobleExplosion.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\BombaDecorator.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\BombaDecorator.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\ConstructorLaberinto.cpp">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
@@ -79,6 +93,18 @@
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\Enemigo.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPatrullando.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPatrullando.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPersiguiendo.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\EstadoPersiguiendo.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
     <None Include="..\..\Source\ExFinalSIS457\ExFinalSIS457.Build.cs">
@@ -102,10 +128,34 @@
     <ClCompile Include="..\..\Source\ExFinalSIS457\ExFinalSIS457GameMode.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IBomba.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IBomba.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoEnemigo.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoEnemigo.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoPuerta.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\IEstadoPuerta.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\ILaberintoBuilder.cpp">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ExFinalSIS457\ILaberintoBuilder.h">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\Puerta.cpp">
+      <Filter>Source\ExFinalSIS457</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ExFinalSIS457\Puerta.h">
       <Filter>Source\ExFinalSIS457</Filter>
     </ClCompile>
   </ItemGroup>

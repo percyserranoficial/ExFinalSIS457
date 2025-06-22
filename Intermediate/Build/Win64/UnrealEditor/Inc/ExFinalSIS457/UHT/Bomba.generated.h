@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define EXFINALSIS457_Bomba_generated_h
 
-#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABomba(); \
 	friend struct Z_Construct_UClass_ABomba_Statics; \
 public: \
 	DECLARE_CLASS(ABomba, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ExFinalSIS457"), NO_API) \
-	DECLARE_SERIALIZER(ABomba)
+	DECLARE_SERIALIZER(ABomba) \
+	virtual UObject* _getUObject() const override { return const_cast<ABomba*>(this); }
 
 
-#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABomba(ABomba&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~ABomba();
 
 
-#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_11_PROLOG
-#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_14_GENERATED_BODY \
+#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_13_PROLOG
+#define FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_14_INCLASS_NO_PURE_DECLS \
-	FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_14_ENHANCED_CONSTRUCTORS \
+	FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_16_INCLASS_NO_PURE_DECLS \
+	FID_ExFinalSIS457_Source_ExFinalSIS457_Bomba_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

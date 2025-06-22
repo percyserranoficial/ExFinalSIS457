@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "Enemigo.generated.h"
 
+class UStaticMeshComponent;
+class IIEstadoEnemigo;
+
 UCLASS()
 class EXFINALSIS457_API AEnemigo : public AActor
 {
@@ -14,6 +17,8 @@ class EXFINALSIS457_API AEnemigo : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AEnemigo();
+
+	UStaticMeshComponent* MeshEnemigo;
 
 protected:
 	// Called when the game starts or when spawned

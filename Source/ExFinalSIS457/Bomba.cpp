@@ -3,6 +3,10 @@
 
 #include "Bomba.h"
 #include "Components/StaticMeshComponent.h"
+#include "Engine/World.h"
+#include "TimerManager.h"
+#include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystem.h"
 
 // Sets default values
 ABomba::ABomba()
@@ -27,6 +31,16 @@ ABomba::ABomba()
 	{
 		MeshBomba->SetMaterial(0, MaterialAsset.Object);
 	}
+
+	//PARTICULAS
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> EfectoAsset(TEXT("/Script/Engine.ParticleSystem'/Game/StarterContent/Particles/P_Explosion.P_Explosion'"));
+	if (EfectoAsset.Succeeded())
+	{
+		EfectoExplosion = EfectoAsset.Object;
+	}
+
+	//FISICAS
+	MeshBomba->SetSimulatePhysics(true);
 }
 
 // Called when the game starts or when spawned
@@ -34,6 +48,7 @@ void ABomba::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	GetWorld()->GetTimerManager().SetTimer(TimerExplosion, this, &ABomba::Explotar, TiempoExplosion, false);
 }
 
 // Called every frame
@@ -41,5 +56,15 @@ void ABomba::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ABomba::Explotar()
+{
+	if(EfectoExplosion)
+	{
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), EfectoExplosion, GetActorLocation(), FRotator::ZeroRotator, true);
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("BOOOOOOOOOOM!"));
 }
 

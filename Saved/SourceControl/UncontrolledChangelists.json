@@ -5,7 +5,13 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/0I/VIQQWOEJKSKV1EK1XGX3EY.uasset",
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/9/MO/72II2GSLK9VS0ULW9SACWH.uasset",
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/9/CI/KST702KSCRZWYV56G3VJBD.uasset",
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/3/HE/U35NZS5A9W1UXP1E3FF2GW.uasset",
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/3/OG/KDQDMXAXZXD8VLDDU4K3JL.uasset",
+				"D:/SIS457/unreal proyectos/ExFinalSIS457/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/HF/9H7TKAXH9DD8KI3TIXGI2I.uasset"
 			]
 		}
 	]

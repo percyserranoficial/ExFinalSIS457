@@ -1,0 +1,40 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "BombaDecorator.h"
+
+// Sets default values
+ABombaDecorator::ABombaDecorator()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+}
+
+// Called when the game starts or when spawned
+void ABombaDecorator::BeginPlay()
+{
+	Super::BeginPlay();
+	//Explotar();
+}
+
+// Called every frame
+void ABombaDecorator::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+
+void ABombaDecorator::SetBombaDecorada(TScriptInterface<IIBomba> NuevaBomba)
+{
+	BombaOriginal = NuevaBomba;
+}
+
+void ABombaDecorator::Explotar()
+{
+	if (BombaOriginal)
+	{
+		BombaOriginal->Explotar();
+	}
+}
+

@@ -21,6 +21,8 @@ public:
 	//PATRONES
 
 	void BuilderL();
+	void DecoratorB();
+	TArray<FVector> PosicionesLibres;
 };
 
 

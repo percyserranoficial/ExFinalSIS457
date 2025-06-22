@@ -27,33 +27,6 @@ void ADirectorLaberinto::Tick(float DeltaTime)
 
 void ADirectorLaberinto::ConstruirLaberinto(UWorld* World, const TArray<TArray<int32>>& Matriz, IILaberintoBuilder* Builder)
 {
-	//Builder->Reset();
-
-	//const float TamanioBloque = 200.0f; // Tamaño del bloque en Unreal Engine
-
-	//for (int32 Y = 1; Y < Matriz.Num(); ++Y)
-	//{
-	//	for (int32 X = 1; X < Matriz[Y].Num(); ++X)
-	//	{
-	//		FVector Posicion(X * TamanioBloque, Y * TamanioBloque, 100.0f);
-
-	//		switch (Matriz[Y][X])
-	//		{
-	//			case 1: // Bloque de acero
-	//				Builder->ConstruirBloqueAcero(Posicion);
-	//				break;
-	//			case 2: // Bloque de madera
-	//				Builder->ConstruirBloqueMadera(Posicion);
-	//				break;
-	//			case 3: // Bloque de concreto
-	//				Builder->ConstruirBloqueConcreto(Posicion);
-	//				break;
-	//			default:
-	//				Builder->RegistrarPosicionLibre(Posicion);
-	//				break;
-	//		}
-	//	}
-	//}
 	if (!World) return;
 
 	const float Espaciado = 400.0f;
